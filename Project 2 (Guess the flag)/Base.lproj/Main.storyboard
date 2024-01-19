@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-Vh-yGN">
-                                <rect key="frame" x="84.666666666666686" y="100" width="224" height="114"/>
+                                <rect key="frame" x="84.666666666666686" y="198" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="estonia"/>
                                 <connections>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me3-3d-Hfy">
-                                <rect key="frame" x="84.666666666666686" y="388" width="224" height="114"/>
+                                <rect key="frame" x="84.666666666666686" y="486" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="france"/>
                                 <connections>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSt-10-qOo">
-                                <rect key="frame" x="84.666666666666686" y="244" width="224" height="114"/>
+                                <rect key="frame" x="84.666666666666686" y="342" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="france"/>
                                 <connections>
@@ -45,7 +45,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="dOA-Vh-yGN" secondAttribute="top" constant="3" id="90u-Fm-gEv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="dOA-Vh-yGN" secondAttribute="top" constant="-95" id="90u-Fm-gEv"/>
                             <constraint firstItem="LSt-10-qOo" firstAttribute="centerX" secondItem="dOA-Vh-yGN" secondAttribute="centerX" id="IJy-Di-5wQ"/>
                             <constraint firstItem="LSt-10-qOo" firstAttribute="top" secondItem="dOA-Vh-yGN" secondAttribute="bottom" constant="30" id="Mes-fg-CL8"/>
                             <constraint firstItem="me3-3d-Hfy" firstAttribute="centerX" secondItem="LSt-10-qOo" secondAttribute="centerX" id="Oc5-3e-msM"/>
