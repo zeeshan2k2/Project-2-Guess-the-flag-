@@ -8,6 +8,7 @@
 import UIKit
 
 var correctAnswer = Int.random(in: 0...2)
+var timesTapped = 0
 
 class ViewController: UIViewController {
     
@@ -49,12 +50,14 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         
-        title = countries[correctAnswer].uppercased()
+        title = countries[correctAnswer].uppercased() + " - Score is \(score)"
     }
     
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        var title: String 
+//        title = countries[correctAnswer].uppercased() + " - Score is \(score)"
+        timesTapped += 1
+        var title: String
         
         if sender.tag == correctAnswer {
             title = "Correct"
@@ -64,11 +67,24 @@ class ViewController: UIViewController {
             score -= 1
         }
         
-        let ac = UIAlertController(title: "Continue", message: "Your score is \(score)", preferredStyle: .alert)
         
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        if timesTapped < 10 {
+            var ac = UIAlertController(title: "Continue", message: "Your score is \(score)", preferredStyle: .alert)
+            if title == "Correct" {
+                ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            } else {
+                ac = UIAlertController(title: "Wrong, that's the flag of \(countries[correctAnswer])", message: "Your score is \(score)", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            }
+            present(ac,animated: true)
+        } else {
+            timesTapped = 0
+            let alert = UIAlertController(title: "You've answered 10 questions!", message: "Your final score is \(score)", preferredStyle: .alert)
+            score = 0
+            alert.addAction(UIAlertAction(title: "close", style: .cancel, handler: askQuestion))
+            present(alert,animated: true)
+        }
         
-        present(ac,animated: true)
     }
     
     
