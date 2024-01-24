@@ -73,9 +73,10 @@ class ViewController: UIViewController {
         if timesTapped < 10 {
             var ac = UIAlertController(title: "Continue", message: "Your score is \(score)", preferredStyle: .alert)
             if title == "Correct" {
+                ac = UIAlertController(title: "Correct", message: "Your score is \(score)", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
             } else {
-                ac = UIAlertController(title: "Wrong, that's the flag of \(countries[correctAnswer])", message: "Your score is \(score)", preferredStyle: .alert)
+                ac = UIAlertController(title: "Wrong, that's not the flag of \(countries[correctAnswer])", message: "Your score is \(score)", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
             }
             present(ac,animated: true)
