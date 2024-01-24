@@ -39,8 +39,10 @@ class ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
         askQuestion()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(scoreTapped))
     }
 
+    
     func askQuestion(action: UIAlertAction! = nil) {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
@@ -87,8 +89,11 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
+    @objc func scoreTapped() {
+        let vc = UIAlertController(title: "Score", message: String(score), preferredStyle: .alert)
+        vc.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(vc, animated: true)
+    }
     
 }
 
