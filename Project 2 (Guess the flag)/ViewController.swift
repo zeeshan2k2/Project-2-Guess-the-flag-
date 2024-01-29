@@ -84,7 +84,7 @@ class ViewController: UIViewController {
             timesTapped = 0
             let alert = UIAlertController(title: "You've answered 10 questions!", message: "Your final score is \(score)", preferredStyle: .alert)
             score = 0
-            alert.addAction(UIAlertAction(title: "close", style: .cancel, handler: askQuestion))
+            alert.addAction(UIAlertAction(title: "Play Again!", style: .cancel, handler: askQuestion))
             present(alert,animated: true)
         }
         
